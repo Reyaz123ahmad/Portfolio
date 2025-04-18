@@ -1,0 +1,22 @@
+
+.home{
+    display: flex;
+    flex-direction: column;
+    
+    
+    
+}
+.home-content{
+    position: relative;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+     height: 100%;
+    gap: 4rem;
+    
+}
+@media(max-width:400px){
+    .home-content{
+        /* gap: 10rem; */
+    }
+}
