@@ -1,0 +1,90 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: sans-serif;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+.app{
+  
+  height: 100vh;
+  width: 100%;
+}
+.navbar{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .7rem 3rem;
+  background-color: lightseagreen;
+}
+.active{
+  background-color: #1f86d6;
+  padding: .5rem;
+  
+}
+.logo{
+  height: 3rem;
+  width: 6rem;
+}
+.link-container{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  
+}
+.link{
+  color: #ffffff;
+  text-decoration: none;
+}
+.phone-btn{
+  font-size: 1.2rem;
+  padding: .7rem 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #1f86d6;
+  border: none;
+  border-radius: 10px;
+}
+.phone-btn:hover{
+  background-color: transparent;
+  border: 1.5px solid #ffffff;
+  transition: all .5s;
+  color: #ffffff;
+  cursor: pointer;
+  transform: translateY(-3px);
+  
+
+
+}
+ .humberger{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  border: none;
+  background-color: transparent;
+  color: #ffffff;
+  
+} 
+
+@media (max-width:400px){
+  /* navbar part */
+  .navbar{
+    padding-inline: 1rem;
+  }
+  .logo{
+    height: 2rem;
+    width: 4rem;
+  }
+  
+
+  
+}
