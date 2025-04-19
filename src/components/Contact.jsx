@@ -5,10 +5,12 @@ import {MdEmail} from 'react-icons/md'
 import { FaWhatsapp } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import './Contact.css'
+import toast from 'react-hot-toast'
 
 const Contact = () => {
   const [formData,setFormData]=useState({name:'',phone:'',email:'',message:''})
   const [isSubmit,setIsSubmit]=useState(false)
+  const [currBg,setCurrBg]=useState('#008000')
   
   function changeHandler(event){
     setFormData((prevFormData)=>(
@@ -21,6 +23,7 @@ const Contact = () => {
    
     event.preventDefault();
     setIsSubmit(true)
+    setCurrBg('#000000')
     setTimeout(() => {
       console.log(formData)
       setFormData({
@@ -30,7 +33,9 @@ const Contact = () => {
         message:'',
         
       })
+      toast.success('Response submitted successfully')
       setIsSubmit(false)
+      setCurrBg('#008000')
     }, 2000);
     
   }
@@ -68,7 +73,7 @@ const Contact = () => {
                 <label htmlFor="message">Message</label>
                 <textarea name="message" id="textarea" value={formData.message} onChange={changeHandler}/>
             </div>
-            <button className='form-btn'disabled={isSubmit}>
+            <button className='form-btn'disabled={isSubmit} style={{'background':currBg}}>
               {
                 isSubmit?'Submitting...':'Submit'
               }

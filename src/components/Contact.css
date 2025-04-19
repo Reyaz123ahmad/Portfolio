@@ -65,7 +65,7 @@
     font-size: 1.2rem;
     border: none;
     font-weight: bold;
-    background-color: green;
+    /* background-color: green; */
     color: #ffffff;
     box-shadow: 1px 1px 10px rgb(198, 196, 196);
     margin-top: 1.5rem;
@@ -91,7 +91,7 @@
 }
   
 
-@media(max-width:400px){
+@media(max-width:450px){
     .contact{
        padding-inline: 1rem;
        
